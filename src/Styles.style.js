@@ -1,5 +1,5 @@
 import styled from "styled-components"
-
+import {Link} from "react-router-dom";
 
 export const Card = styled.div`
   width: 500px;
@@ -89,4 +89,9 @@ export const InputStyled = styled.input`
   &focus {
     border:none;
   }
+`
+
+export const LinkStyled = styled(Link)`
+    color:black;
+  border: 0px;
 `

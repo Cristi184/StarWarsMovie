@@ -1,5 +1,5 @@
 import {Header} from "../Header/Header";
-import {useState, useEffect, Fragment} from "react";
+import { Fragment} from "react";
 import {BodyWrapper} from "../../Styles.style";
 import {Component} from "./Component";
 

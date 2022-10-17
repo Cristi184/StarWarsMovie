@@ -1,5 +1,4 @@
-import {Link} from "react-router-dom";
-import {Card} from "../../Styles.style";
+import {Card, LinkStyled} from "../../Styles.style";
 import linkGenerate from "../../Utils/linkGenerate";
 
 export const CardMovie = (props) => {
@@ -7,7 +6,7 @@ export const CardMovie = (props) => {
     return (
         <>
             <Card>
-                <Link to={linkGenerate(title)}><h1>{title}</h1></Link>
+                <LinkStyled to={linkGenerate(title)}><h1>{title}</h1></LinkStyled>
                 <h4>Director:{director}</h4>
                 <h4>Producer:{producer}</h4>
                 <p>Release Date:{release_date}</p>

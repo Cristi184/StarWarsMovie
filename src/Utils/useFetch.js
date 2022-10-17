@@ -16,7 +16,9 @@ const useFetch = (url) => {
             } catch (err) {
                 setError(err)
             }
-            setLoading(false)
+            setTimeout(() => {
+                setLoading(false)
+            }, 4000);
         };
         fetchData();
     }, [url])

@@ -1,7 +1,9 @@
 import {useEffect, useState} from "react";
 import useFetch from "../../Utils/useFetch";
 import {CardMovie} from "../CardMovie/CardMovie";
-import {BodyWrapper, CardLoading} from '../../../src/Styles.style'
+import {BodyWrapper,Card} from '../../Styles.style'
+import React from "react"
+import {MyLoaderHome} from "../../Utils/loader";
 
 
 
@@ -29,8 +31,7 @@ export const Body = (props) => {
 
     return (
         <BodyWrapper>
-            {loading ? <CardLoading>Loading...
-                                </CardLoading> : movieCard}
+            {loading ? <Card><MyLoaderHome/></Card> : movieCard}
         </BodyWrapper>
     );
 }
