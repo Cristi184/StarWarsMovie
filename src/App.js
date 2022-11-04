@@ -8,15 +8,8 @@ import linkGenerate from "./Utils/linkGenerate";
 
 export const App = () => {
     const {data, loading, error} = useFetch("https://swapi.dev/api/films")
-    const [movies, setMovies] = useState([])
-    useEffect(() => {
-        if (!loading && data) {
-            setMovies(data.results)
-        }
-    }, [loading])
 
-
-    const movieLinks = movies?.map((movie, index) => {
+    const movieLinks = data.results?.map((movie, index) => {
         return (
             <>
                 <Route key={index} path={`/${linkGenerate(movie.title)}`}
